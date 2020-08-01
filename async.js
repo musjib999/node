@@ -43,22 +43,22 @@ function addPromise(a, b) {
 
 //Calculating the sum of 1 to 5 using addPromise in sequential order
 
-addPromise(5, 5).then((result) => {
-    console.log(result);
+addPromise(5, 5).then((r) => {
+    console.log(r);
     return addPromise(4, 4).then((r) => {
         console.log(r);
-        return addPromise(3, 3).then((s)=>{
-            console.log(s);
-            return addPromise(2, 2).then((s)=>{
-                console.log(s);
-                return addPromise(1, 1).then((s)=>{
-                    console.log(s);
+        return addPromise(3, 3).then((r)=>{
+            console.log(r);
+            return addPromise(2, 2).then((r)=>{
+                console.log(r);
+                return addPromise(1, 1).then((r)=>{
+                    console.log(r);
                 })
             })
         })
     })
-}).catch((err) => {
-    console.log(err);
+}).catch((e) => {
+    console.log(e);
 });
 
 
