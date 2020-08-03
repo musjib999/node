@@ -43,24 +43,32 @@ function addPromise(a, b) {
 
 //Calculating the sum of 1 to 5 using addPromise in sequential order
 
-addPromise(5, 5).then((r) => {
-    console.log(r);
-    return addPromise(4, 4).then((r) => {
-        console.log(r);
-        return addPromise(3, 3).then((r)=>{
-            console.log(r);
-            return addPromise(2, 2).then((r)=>{
-                console.log(r);
-                return addPromise(1, 1).then((r)=>{
-                    console.log(r);
-                })
-            })
-        })
-    })
-}).catch((e) => {
-    console.log(e);
-});
+// addPromise(5, 5).then((r) => {
+//     console.log(r);
+//     return addPromise(4, 4).then((r) => {
+//         console.log(r);
+//         return addPromise(3, 3).then((r)=>{
+//             console.log(r);
+//             return addPromise(2, 2).then((r)=>{
+//                 console.log(r);
+//                 return addPromise(1, 1).then((r)=>{
+//                     console.log(r);
+//                 })
+//             })
+//         })
+//     })
+// }).catch((e) => {
+//     console.log(e);
+// });
 
 
+//Craete a generator
+function* naming () {
+    var name = yield 'hello, what is your name?';
+    return 'My name is ' + name
+  }
+  var gen = naming();
+  console.log(gen.next().value);
+  console.log(gen.next('Musa').value);
 
 
