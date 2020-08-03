@@ -50,6 +50,7 @@ addPromise(5, 5).then((r) => {
                 console.log(r);
                 return addPromise(1, 1).then((r)=>{
                     console.log(r);
+                    return console.log('Boom!!!');
                 })
             })
         })
