@@ -14,9 +14,6 @@ function addAsync(a, b) {
 }
 // addAsync(1, 5);
 
-//Calculating the sum of 1 to 5 using addAsync in sequential order
-
-
 
 //Promisify addAsync to addPromise
 
@@ -43,23 +40,23 @@ function addPromise(a, b) {
 
 //Calculating the sum of 1 to 5 using addPromise in sequential order
 
-// addPromise(5, 5).then((r) => {
-//     console.log(r);
-//     return addPromise(4, 4).then((r) => {
-//         console.log(r);
-//         return addPromise(3, 3).then((r)=>{
-//             console.log(r);
-//             return addPromise(2, 2).then((r)=>{
-//                 console.log(r);
-//                 return addPromise(1, 1).then((r)=>{
-//                     console.log(r);
-//                 })
-//             })
-//         })
-//     })
-// }).catch((e) => {
-//     console.log(e);
-// });
+addPromise(5, 5).then((r) => {
+    console.log(r);
+    return addPromise(4, 4).then((r) => {
+        console.log(r);
+        return addPromise(3, 3).then((r)=>{
+            console.log(r);
+            return addPromise(2, 2).then((r)=>{
+                console.log(r);
+                return addPromise(1, 1).then((r)=>{
+                    console.log(r);
+                })
+            })
+        })
+    })
+}).catch((e) => {
+    console.log(e);
+});
 
 
 //Craete a generator
